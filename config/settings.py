@@ -131,6 +131,9 @@ LOGOUT_REDIRECT_URL = '/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
+# staticファイルの定義
+STATIC_URL = '/static/'
+
 # django-filter
 # https://django-filter.readthedocs.io/en/latest/ref/settings.html#filters-verbose-lookups
 # 検索フォームのラベル表示の修正。英語の説明を消す。

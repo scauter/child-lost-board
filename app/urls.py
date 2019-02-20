@@ -1,14 +1,15 @@
 from django.urls import path
 
-from .models import Item
-from .views import ItemFilterView, ItemDetailView, ItemCreateView, ItemUpdateView, ItemDeleteView
+from . import views
 
 # アプリケーションのルーティング設定
 
+app_name = 'app'
+
 urlpatterns = [
-    path('detail/<int:pk>/', ItemDetailView.as_view(), name='detail'),
-    path('create/', ItemCreateView.as_view(), name='create'),
-    path('update/<int:pk>/', ItemUpdateView.as_view(), name='update'),
-    path('delete/<int:pk>/', ItemDeleteView.as_view(), name='delete'),
-    path('', ItemFilterView.as_view(), name='index'),
+    path('info/edit/<int:info_id>', views.info_edit, name='info_edit'),
+    path('info/del/<int:info_id>', views.info_del, name='info_del'),
+    path('create/', views.create, name='create'),
+    path('info/', views.info_list, name='info'),
+    path('', views.index, name='index'),
 ]

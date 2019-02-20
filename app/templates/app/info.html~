@@ -1,0 +1,21 @@
+{% extends "./_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <div class="row">
+
+  </div>
+
+  <div>迷子情報</div>
+  <form action="" method="post">
+  {% csrf_token %}
+  <input type="text" name="lost_child_info" value="" />
+  <input type="submit" value="submit" />
+
+  <p>迷子情報の一覧</p>
+  <p>{{ info_all }}</p>
+  
+  
+</div>
+
+{% endblock  %}

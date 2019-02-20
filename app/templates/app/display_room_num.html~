@@ -1,0 +1,32 @@
+{% extends "./_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <div class="row">
+
+  </div>
+
+  <p>部屋番号</p>
+  <form action="" method="post">
+  {% csrf_token %}
+  <input type="text" name="info" value="" />
+  <input type="submit" value="submit" />
+
+  <br>
+  <a href="create/">新規部屋作成</a>
+  <br>
+  <p>{{ text }}</p>
+
+  <p>search</p>
+  <form action="" method="post">
+  {% csrf_token %}
+  <input type="text" name="search"  value="" />
+  <input type="submit" value="search" />
+  <p>データベース情報</p>
+  <p>データベース一覧</p>
+  <p>{{ room_num_list }}</p>
+  
+  
+</div>
+
+{% endblock  %}
